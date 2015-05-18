@@ -1,0 +1,486 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+/*
+
+Powell Peralta Test Project
+Author: Topher Young
+Version: 1.0
+
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/* General Styles */
+
+html {
+  background: url('../images/bg.jpg') no-repeat center top;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Montserrat", sans-serif;
+}
+
+header { margin: 0 auto; }
+
+a {
+  text-decoration: none; 
+  font-family: "Montserrat", sans-serif;
+}
+
+a:hover { text-decoration: none; }
+
+p {
+  font-family: "canada-type-gibson";
+}
+
+.row {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+/* Header */
+
+.headerSection {
+  padding: 0;
+  margin: 0;
+}
+
+.subscribe {
+  text-align: right;
+
+  a {
+    padding-top: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+}
+
+
+.subscribe a:hover {
+  color: #b4282e;
+}
+
+.subscribe a:after {
+  content: "·";
+  color: #fff;
+  font-size: 30px;
+  vertical-align: middle;
+  padding-left: 15px;
+}
+
+.subscribe img {
+  display: inline-block;
+}
+
+/* Social Media */
+
+.social {
+  text-align: right;
+  padding: 0;
+}
+
+.fb, .rss, .tw, .yt {
+  display: inline-block;
+  margin: 10px 0 0 10px;
+  padding: 10px;
+  max-width: 60px;
+  max-height: 60px;
+  border-bottom: 4px solid #999;
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fb:hover, .rss:hover, .tw:hover, .yt:hover {
+  border-bottom: 4px solid #fff;
+}
+
+.fb img, .rss img, .tw img, .yt img {
+  opacity: 0.25;
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fb:hover img, .rss:hover img, .tw:hover img, .yt:hover img {
+  opacity: 1;
+}
+
+.fb { background-color: #3A589B; }
+
+.rss { background-color: #E19126; }
+
+.tw { background-color: #598DCA; }
+
+.yt { background-color: #CF3427; }
+
+
+/* Navigation */
+
+nav { padding-top: 15px; }
+
+nav ul { padding: 0; }
+
+nav ul li {
+  list-style: none;
+  height: 40px;
+  text-align: center;
+}
+
+nav ul li a:before {
+  content: " ";
+  position: absolute;
+  margin: 10px 0 0 -30px;
+  width: 15px;
+  height: 3px;
+  background-color: #fff;
+}
+
+nav ul li a:after {
+  content: " ";
+  position: absolute;
+  margin: 10px 0 0 15px;
+  width: 15px;
+  height: 3px;
+  background-color: #fff;
+}
+
+.navItem {
+  padding: 0 5px 0 5px;
+}
+
+.rightNav { padding-right: 0; }
+
+.leftNav { padding-left: 0; }
+
+nav ul li a {
+  background-color: #b4282e;
+  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+  height: 100%;
+  width: 100%;
+  display: block;
+  padding-top: 8px;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+nav ul li a:active, nav ul li a:hover, nav ul li a:focus { 
+  color: #f3ca31;
+  box-shadow: 0 4px 0 #f3ca31;
+  text-decoration: none;
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover a:after, nav ul li:hover a:before { 
+  background-color: #f3ca31;
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navTrigger {
+  display: none;
+}
+
+.closeNav {
+  display: none;
+}
+
+/* Slideshow */
+
+.mobileLogo {
+  display: none;
+}
+
+.slideshowContainer {
+  max-width: 1024px;
+  max-height: 350px;
+  margin: 30px auto 10px auto;
+}
+
+.slideshowTexture {
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  z-index: 99;
+  margin-bottom: 30px;
+  background: url('../images/sliderTexture.png') center center no-repeat;
+}
+
+.slideshowTexture img {
+  margin: 50px 0 0 30px; 
+}
+
+.slides {
+  position: absolute;
+  left: 50%;
+    transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+  background-color: #fff;
+  width: 1024px;
+/*  height: auto;*/
+  padding: 5px;
+  z-index: 9;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+
+/* Blog Section */
+
+.articles {
+  max-width: 1054px;
+  margin: 30px auto 10px auto;
+}
+
+.blogArticle {
+  background-color: #fefefe;
+  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blogArticle h1 {
+  font-size: 24px;
+  margin: 10px 0 15px 0;
+  text-align: left;
+}
+
+.blogArticle h6 {
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+  text-align: left;
+}
+
+.blogArticle p {
+  font-size: 14px;
+  line-height: 25px;
+  text-align: left;
+}
+
+.blogArticle a {
+  text-align: center;
+  color: #b4282e;
+}
+
+.blogArticle a:active { color: #f3ca31; }
+
+.blogArticle a:hover { text-decoration: underline; }
+
+
+/* Skateboarder Section */
+
+.skateboarders {
+  max-width: 1054px;
+  margin: 0 auto;
+}
+
+.outerCol { padding: 0; }
+
+.sb { margin-bottom: 15px;}
+
+.sb:hover h1 {
+  color: #f3ca31;
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.sb:hover img {
+  box-shadow: 0 4px 0  #f3ca31;
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.sbOverlay {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+}
+
+.sbOverlay:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+.overlayContent {
+  display: inline-block;
+  vertical-align: middle;
+  width: 99%;
+}
+
+.skateboarders img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+}
+
+.skateboarders h1 {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+/* Skatedeck Section */
+
+.skatedecks {
+  position: relative;
+  margin: 30px auto 0 auto;
+  background: url('../images/moduleBG.jpg') center center no-repeat;
+  background-size: cover;
+  max-width: 1024px;
+  min-height: 300px;
+  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+}
+
+.deckContainer {
+  text-align: center;
+}
+
+.deck {
+  display: inline-block;
+}
+
+.skatedecks img {
+  display: inline-block;
+  padding: 20px 15px;
+}
+
+.callout {
+  position: relative;
+}
+
+.callout:hover:after{
+    background: rgba(0,0,0,.7);
+    box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+    bottom: 26px;
+    color: #fff;
+    content: attr(title);
+    left: -50%;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 98;
+    width: 205px;
+    text-align: center;
+}
+
+.callout:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: 20px;
+    content: "";
+    left: 45%;
+    position: absolute;
+    z-index: 99;
+
+}
+
+
+/* Contact Us */
+
+.contact {
+  margin: 30px auto 30px auto;
+  background: url('../images/moduleBG.jpg') center center no-repeat;
+  background-size: cover;
+  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+  max-width: 1024px;
+}
+
+.contactSocial img {
+  display: inline-block;
+  padding: 20px 10px 0 0;
+  -webkit-filter: grayscale(1);
+}
+
+.contactSocial img:hover {
+  -webkit-filter: none;
+  webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact form {
+  padding-top: 30px;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  margin: 10px 0;
+  border-top: 3px solid #999;
+  border-left: 3px solid #999;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.contact input:focus, .contact textarea:focus {
+  box-shadow: 0 0 10px #f3ca31;
+  outline: none;
+}
+
+.message {
+  height: 50px;
+}
+
+.contact button {
+  width: 250px;
+  height: 40px;
+  background-color: #b4282e;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.contact button:hover {
+  color: #f3ca31; 
+}
+
+.contact form {
+  text-align: right;
+}
