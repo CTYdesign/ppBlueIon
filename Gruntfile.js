@@ -408,8 +408,13 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
+    'concat',
+    'cssmin',
+    'uglify',
     'copy:dist',
-    'rev'
+    'rev',
+    'usemin',
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [

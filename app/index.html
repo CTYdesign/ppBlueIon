@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/responsive.css">
     <!-- endbuild -->
+
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -77,10 +78,10 @@
             <a href="#" class="close">X</a>
           </div>
           <ul>
-            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 navItem leftNav"><a href="#">SK8T News</a></li>
-            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 navItem "><a href="#">Skateboarders</a></li>
-            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 navItem "><a href="#">Board Design</a></li>
-            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 navItem rightNav"><a href="#">Contact Us</a></li>
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 navItem leftNav"><a href="#news">SK8T News</a></li>
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 navItem "><a href="#skateboarders">Skateboarders</a></li>
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 navItem "><a href="#decks">Board Design</a></li>
+            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 navItem rightNav"><a href="#contact">Contact Us</a></li>
           </ul>
         </nav>
       </div>
@@ -103,6 +104,7 @@
   </div>
 
   <!-- News Articles -->
+<section id="news">
   <div class="container-fluid">
     <div class="row articles">
 
@@ -135,8 +137,10 @@
 
     </div>
   </div>
+</section>
 
   <!-- Skateboarders -->
+<section id="skateboarders">
   <div class="container-fluid">
     <div class="row skateboarders">
       <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 outerCol">
@@ -201,7 +205,10 @@
 
     </div>
   </div>
+</section>
 
+  <!-- Skatedecks -->
+<section id="decks">
   <div class="container-fluid">
     <div class="row skatedecks">
       <div class="deckContainer">
@@ -277,7 +284,10 @@
     </div>
     </div>
   </div>
+</section>
 
+<!-- Contact Us -->
+<section id="contact">
   <footer>
     <div class="container-fluid">
       <div class="row contact">
@@ -303,6 +313,7 @@
       </div>
     </div>
   </footer>
+</section>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
