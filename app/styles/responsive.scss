@@ -274,6 +274,20 @@ Version: 1.0
 	.slideshowTexture {
 		display: none;
 	}
+
+	.skateboarderInfo {
+		text-align: center;
+
+		img {
+			max-width: 90%;
+			padding: 20px;
+			float: none;
+		}
+
+		ul {
+			padding: 0;
+		}
+	}
 }
 
 /* =================

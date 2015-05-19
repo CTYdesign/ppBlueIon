@@ -28,31 +28,31 @@
       <div class="row">
 
         <div class="col-lg-3 col-lg-offset-5 col-md-3 col-md-offset-4 col-sm-3 col-sm-offset-1 col-xs-12 subscribe">
-          <a href="#">Subscribe</a>
+          <a data-target="#subscribeModal" data-toggle="modal">Subscribe</a>
         </div>
 
         <div class="col-lg-4 col-md-5 col-sm-8 col-xs-12 social">
           <img src="images/subscribeDots.png" id="dots" />
           <!-- Social Media -->
-          <a href="#">
+          <a href="https://www.facebook.com/powellperalta" target="_blank">
             <div class="fb">
               <img src="images/social/fb.png" />
             </div>
           </a>
 
-          <a href="#">
+          <a href="https://twitter.com/powellperalta" target="_blank">
             <div class="rss">
               <img src="images/social/rss.png" />
             </div>
           </a>
 
-          <a href="#">
+          <a href="https://twitter.com/powellperalta" target="_blank">
             <div class="tw">
               <img src="images/social/tw.png" />
             </div>
           </a>
 
-          <a href="#">
+          <a href="https://www.youtube.com/PowellPeralta" target="_blank">
             <div class="yt">
               <img src="images/social/yt.png" />
             </div>
@@ -64,6 +64,34 @@
         </div>
 
       </div>
+
+      <!-- Subscribe Modal -->
+      <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-md">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                              <span class="sr-only">Close</span>
+                          </button>
+                          <h4 class="modal-title">Subscribe</h4>
+                      </div><!--modal-header-->
+                      <div class="modal-body">
+                        <p>Join our Powell Peralta Newsletter. Just enter your email and enjoy the 'gnar.</p>
+                        <form>
+                          <div class="form-group">
+                            <label for="recipient-name" class="control-label">Email:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Submit</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
 
       
       <!-- Navigation -->
@@ -148,7 +176,7 @@
         <div class="row">
 
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 sb">
-            <a href="#">
+            <a href="skaters/lance.html">
               <div class="sbOverlay">
                 <div class="overlayContent">
                   <h1><strong>Lance Mountain</strong></h1>
@@ -159,7 +187,7 @@
           </div>
 
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 sb">
-            <a href="#">
+            <a href="skaters/rodney.html">
               <div class="sbOverlay">
                 <div class="overlayContent">
                   <h1><strong>Rodney Mullens</strong></h1>
@@ -174,7 +202,7 @@
         <div class="row">
 
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sb">
-            <a href="#">
+            <a href="skaters/steve.html">
               <div class="sbOverlay">
                 <div class="overlayContent">
                   <h1><strong>Steve Caballero</strong></h1>
@@ -191,7 +219,7 @@
       <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 outerCol sb">
         <div class="row">
           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <a href="#">
+            <a href="skaters/tommy.html">
               <div class="sbOverlay">
                 <div class="overlayContent">
                   <h1><strong>Tommy Guerrero</strong></h1>
@@ -213,71 +241,73 @@
     <div class="row skatedecks">
       <div class="deckContainer">
       <div class="deck">
-        <a href="#">
+
+
+        <a data-target="#one" data-toggle="modal" class="deckButton">
           <span class="callout" title="This is Deck #1. Cool Beans, bruh - Deck 8&quot; x 32&quot;" >
-            <img src="images/decks/1.png" class="img-responsive" />
+            <img src="images/decks/1.png" alt="1" class="img-responsive" />
           </span>
         </a>
 
-        <a href="#">
+        <a data-target="#two" data-toggle="modal" class="deckButton">
           <span class="callout" title="This isn't Nam, Smokey - There are rules Deck 8&quot; x 32&quot;">
-            <img src="images/decks/2.png" alt="1" class="img-responsive" />
+            <img src="images/decks/2.png" alt="2" class="img-responsive" />
           </span>
         </a>
       </div>
 
       <div class="deck">
-        <a href="#">
+        <a data-target="#three" data-toggle="modal" class="deckButton">
           <span class="callout" title="THIS IS WHAT HAPPENS, LARRY Deck 8&quot; x 32&quot;">
-            <img src="images/decks/3.png" alt="1" />
+            <img src="images/decks/3.png" alt="3" class="img-responsive" />
           </span>
         </a>
 
-        <a href="#">
+        <a data-target="#four" data-toggle="modal" class="deckButton">
           <span class="callout" title="I Brought a Ringer Deck 8&quot; x 32&quot;">
-            <img src="images/decks/4.png" alt="1" />
+            <img src="images/decks/4.png" alt="4" class="img-responsive" />
           </span>
         </a>
       </div>
 
       <div class="deck">
-        <a href="#">
+        <a data-target="#five" data-toggle="modal" class="deckButton">
           <span class="callout" title="Plan B Ryna Sheckler Jersey Skateboard Deck 8&quot; x 32&quot;">
-            <img src="images/decks/5.png" alt="1" />
+            <img src="images/decks/5.png" alt="5" class="img-responsive" />
           </span>
         </a>
 
-        <a href="#">
+         <a data-target="#six" data-toggle="modal" class="deckButton">
           <span class="callout" title="Little Lebowski Urban Acheivers Skateboard Deck 8&quot; x 32&quot;">
-            <img src="images/decks/6.png" alt="1" />
+            <img src="images/decks/6.png" alt="6" class="img-responsive" />
           </span>
         </a>
       </div>
 
       <div class="deck">
-        <a href="#">
-          <span class="callout" title="Watch out man I got a beverage here Skateboard Deck 8&quot; x 32&quot;">
-            <img src="images/decks/7.png" alt="1" />
+        <a data-target="#seven" data-toggle="modal" class="deckButton">
+          <span class="callout" title="Old Ben Kenobi Skateboard Deck 8&quot; x 32&quot;">
+            <img src="images/decks/7.png" alt="7" class="img-responsive" />
           </span>
         </a>
 
-        <a href="#">
+        <a data-target="#eight" data-toggle="modal" class="deckButton">
           <span class="callout" title="Anything but the Fucking Eagles Skateboard Deck 8&quot; x 32&quot;">
-            <img src="images/decks/8.png" alt="1" />
+            <img src="images/decks/8.png" alt="8" class="img-responsive" />
           </span>
         </a>
       </div>
 
       <div class="deck">
-        <a href="#">
+        <a data-target="#nine" data-toggle="modal" class="deckButton">
           <span class="callout" title="Jack Platypus and his Gang of Avengers Jersey Skateboard Deck 8&quot; x 32&quot;">
-            <img src="images/decks/9.png" alt="1" />
+            <img src="images/decks/9.png" alt="9" class="img-responsive" />
           </span>
         </a>
 
-        <a href="#">
-          <span class="callout" title="Well That's just uh your Opinion Skateboard Deck 8&quot; x 32&quot;">
-            <img src="images/decks/10.png" alt="1" />
+        <a data-target="#ten" data-toggle="modal" class="deckButton">
+          <span class="callout" title="Shut up Donny Skateboard Deck 8&quot; x 32&quot;">
+            <img src="images/decks/10.png" alt="10" class="img-responsive" />
           </span>
         </a>
       </div>
@@ -285,6 +315,9 @@
     </div>
   </div>
 </section>
+
+  <!-- Deck Modal -->
+  <div id="deckModal"></div>
 
 <!-- Contact Us -->
 <section id="contact">
@@ -295,10 +328,10 @@
           <h1>Contact Us for More Information</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper nulla ut odio scelerisque varius. Phasellus dui nunc, lacinia at vehicula congue, vehicula nec tellus. Morbi dignissim rutrum lorem at tincidunt. </p>
           <div class="contactSocial">
-            <a href="#"><img src="images/social/fbsmall.jpg" alt="Facebook" /></a>
-            <a href="#"><img src="images/social/rsssmall.jpg" alt="RSS" /></a>
-            <a href="#"><img src="images/social/twsmall.jpg" alt="Twitter" /></a>
-            <a href="#"><img src="images/social/ytsmall.jpg" alt="YouTube" /></a>
+            <a href="https://www.facebook.com/powellperalta" target="_blank"><img src="images/social/fbsmall.jpg" alt="Facebook" /></a>
+            <a href="https://twitter.com/powellperalta" target="_blank"><img src="images/social/rsssmall.jpg" alt="RSS" /></a>
+            <a href="https://twitter.com/powellperalta" target="_blank"><img src="images/social/twsmall.jpg" alt="Twitter" /></a>
+            <a href="https://www.youtube.com/PowellPeralta" target="_blank"><img src="images/social/ytsmall.jpg" alt="YouTube" /></a>
           </div>
         </div>
 
@@ -315,9 +348,10 @@
   </footer>
 </section>
 
-        <!-- build:js({.tmp,dist,app}) scripts/application.js -->
+        <!-- build:js scripts/vendor.js -->
         <!-- vendor, internal -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
         <!-- endbuild -->
         
         
