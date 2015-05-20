@@ -67,6 +67,7 @@ $(function() {
 	});
 });
 
+
 /* Enable nav scroll */
 
 $('a[href*=#]:not([href=#])').click(function() {
@@ -83,3 +84,37 @@ $('a[href*=#]:not([href=#])').click(function() {
         }
     }
 });
+
+
+/* Load remote deck information for modal */
+
+$(function () {
+
+    $('.deckButton').on('click', function () {
+
+        var $this = $(this).data('target');
+
+        $('#deckModal').load('../decks/deck1.html ' + $this, function (response, status, xhr) {
+
+            if (status == "success") {
+
+                $($this).modal('show');
+            }
+        });
+    });
+
+});
+
+$(function(){
+         $('.close').click(function(){
+              $('#deckModal').modal('hide');
+          });
+      });
+
+
+/* Pre-loader Initialization */
+// $(window).load(function() { 
+//       $('#status').fadeOut(); 
+//       $('#preloader').delay(350).fadeOut('slow'); 
+//       $('body').delay(350).css({'overflow':'visible'});
+//     })

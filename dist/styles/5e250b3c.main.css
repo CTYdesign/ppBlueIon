@@ -5225,6 +5225,26 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999; }
+
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url("../img/preload.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px; }
+
 /* Dots */
 .slick-slider {
   margin-bottom: 30px; }
@@ -5399,6 +5419,7 @@ p {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
+    cursor: pointer;
     webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
     .subscribe a:hover {
@@ -5523,7 +5544,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
   height: 350px;
   z-index: 99;
   margin-bottom: 30px;
-  background: url("../images/fbd93853.sliderTexture.png") center center no-repeat; }
+  background: url("../images/274a7c96.sliderDot.png") center center repeat; }
   .slideshowTexture img {
     margin: 50px 0 0 30px; }
 
@@ -5670,6 +5691,28 @@ nav ul li:hover a:after, nav ul li:hover a:before {
   position: absolute;
   z-index: 99; }
 
+.deckButton {
+  cursor: pointer; }
+
+.modalDeckContent img {
+  margin: 0 auto 20px auto; }
+.modalDeckContent p {
+  margin-top: 10px;
+  font-size: 16px; }
+
+/* Modal Buttons */
+.btn {
+  border-radius: 0;
+  text-transform: uppercase; }
+
+.btn-primary {
+  background-color: #b4282e;
+  border-color: #b4282e; }
+  .btn-primary:hover, .btn-primary:active {
+    color: #f3ca31;
+    background-color: #b4282e;
+    border-color: #b4282e; }
+
 /* Contact Us */
 .contact {
   margin: 30px auto 30px auto;
@@ -5713,6 +5756,50 @@ nav ul li:hover a:after, nav ul li:hover a:before {
 
 .message {
   height: 50px; }
+
+/*
+
+Powell Peralta Test Project - SKATER STYLES
+Author: Topher Young
+Version: 1.0
+
+*/
+.skateboarderInfo {
+  background: rgba(255, 255, 255, 0.8);
+  margin: 20px auto;
+  padding: 25px; }
+  .skateboarderInfo img {
+    float: left;
+    padding: 0 20px 20px 0; }
+  .skateboarderInfo p {
+    font-size: 18px; }
+  .skateboarderInfo h1 {
+    margin-top: 0;
+    text-transform: uppercase; }
+  .skateboarderInfo ul {
+    font-size: 16px;
+    list-style: none;
+    margin-top: 10px; }
+  .skateboarderInfo a {
+    text-decoration: none; }
+    .skateboarderInfo a:hover {
+      text-decoration: none; }
+
+.backButton {
+  width: 250px;
+  height: 40px;
+  background-color: #b4282e;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: none;
+  margin: 20px auto;
+  text-align: center;
+  padding-top: 10px;
+  text-decoration: none !important; }
+  .backButton:hover {
+    color: #f3ca31;
+    text-decoration: none !important; }
 
 /*
 
@@ -5913,7 +6000,16 @@ Version: 1.0
     /*	margin: 0;*/ }
 
   .slideshowTexture {
-    display: none; } }
+    display: none; }
+
+  .skateboarderInfo {
+    text-align: center; }
+    .skateboarderInfo img {
+      max-width: 90%;
+      padding: 20px;
+      float: none; }
+    .skateboarderInfo ul {
+      padding: 0; } }
 /* =================
  * Custom Extra small Devices, Phones
  ===================*/

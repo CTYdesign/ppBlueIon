@@ -11,11 +11,9 @@
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
+    <!-- build:css(.tmp) ../styles/main.css -->
     <link rel="stylesheet" href="../styles/main.css">
     <!-- endbuild -->
-   <!--  <link rel="stylesheet" href="styles/responsive.css"> -->
-
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -131,14 +129,15 @@
 
 
 
-  <!-- build:js scripts/vendor.js -->
-        <!-- vendor, internal -->
+      <!-- build:js(app/..) ../scripts/vendor.js -->
+        <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <!-- endbower -->
         <!-- endbuild -->
         
         
-        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <!-- build:js({app,.tmp}) ../scripts/main.js -->
         <script src="../scripts/slick.min.js"></script>
         <script src="../scripts/main.js"></script>
         <!-- endbuild -->
