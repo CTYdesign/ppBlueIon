@@ -474,7 +474,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
   background-color: $red;
   border-color: $red;
 
-  &:hover {
+  &:hover, &:active {
     color: $yellow;
     background-color: $red;
     border-color: $red;
