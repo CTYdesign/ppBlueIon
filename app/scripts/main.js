@@ -70,27 +70,27 @@ $('a[href*=#]:not([href=#])').click(function() {
 
 $(function () {
 
+    var successfullPull = false;
+    
     $('.deckButton').on('click', function () {
 
-        var $this = $(this).data('target');
+        var deckInfo = $(this).data('target');
+    
+    if ( successfullPull ) {
+      $(deckInfo).on('shown.bs.modal', function(e) {
+        $(deckInfo).modal('show');
+      });
+    } else {
+      $('#deckModal').load('../decks/deck1.html', function(status) {
+            $(deckInfo).modal('show');
+        successfullPull = true;
+            console.log('The info has loaded' + successfullPull);
+          });
+    }
 
-        $('#deckModal').load('../decks/deck1.html ' + $this, function (response, status, xhr) {
-
-            if (status == "success") {
-
-                $($this).modal('show');
-            }
-        });
     });
 
 });
-
-$(function(){
-         $('.close').click(function(){
-              $('#deckModal').modal('hide');
-          });
-      });
-
 
 /* Pre-loader Initialization */
 // $(window).load(function() { 
