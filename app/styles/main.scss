@@ -28,6 +28,15 @@ $rss: #E19126;
 $tw: #598DCA;
 $yt: #CF3427;
 
+/* Mixins */
+
+@mixin hoverAnimation  {
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 /* General Styles */
 
 html {
@@ -72,16 +81,13 @@ p {
   text-align: right;
 
   a {
+    @include hoverAnimation;
     padding-top: 20px;
     display: inline-block;
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
-    webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
 
     &:hover {
       color: $red;
@@ -111,16 +117,13 @@ p {
 }
 
 .fb, .rss, .tw, .yt {
+  @include hoverAnimation;
   display: inline-block;
   margin: 10px 0 0 10px;
   padding: 10px;
   max-width: 60px;
   max-height: 60px;
   border-bottom: 4px solid #999;
-  webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 
   &:hover {
     border-bottom: 4px solid #fff;
@@ -131,11 +134,8 @@ p {
   }
 
   img {
+    @include hoverAnimation;
     opacity: 0.25;
-    webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
   }
 }
 
@@ -192,13 +192,10 @@ nav {
         }
 
         &:active, &:hover, &:focus {
+          @include hoverAnimation;
           color: $yellow;
           box-shadow: 0 4px 0 #f3ca31;
           text-decoration: none;
-          webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          -o-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
         }
       }
     }
@@ -217,11 +214,8 @@ nav {
 
 
 nav ul li:hover a:after, nav ul li:hover a:before { 
+  @include hoverAnimation;
   background-color: #f3ca31;
-  webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .navTrigger {
@@ -355,19 +349,13 @@ nav ul li:hover a:after, nav ul li:hover a:before {
 .sb { margin-bottom: 15px;}
 
 .sb:hover h1 {
+  @include hoverAnimation;
   color: #f3ca31;
-  webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .sb:hover img {
+  @include hoverAnimation;
   box-shadow: 0 4px 0  #f3ca31;
-  webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 
 .sbOverlay {
@@ -531,11 +519,8 @@ nav ul li:hover a:after, nav ul li:hover a:before {
   -webkit-filter: grayscale(1);
 
   &:hover {
+    @include hoverAnimation;
     -webkit-filter: none;
-    webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
   }
 }
 

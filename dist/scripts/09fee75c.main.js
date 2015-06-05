@@ -92,10 +92,14 @@ $(function () {
 
     $('.deckButton').on('click', function () {
 
-        var deckInfo = $(this).data('target');
+        var deckLoad = $(this).data('target');
 
-        $('#deckModal').load('../decks/deck1.html' + deckInfo, function() {
-        	$(deckInfo).modal('show');
+        $('#deckModal').load('../decks/deck1.html ', function (response, status, xhr) {
+
+            if (status == "success") {
+
+                $($this).modal('show');
+            }
         });
     });
 
