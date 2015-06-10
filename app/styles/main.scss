@@ -7,6 +7,9 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 @import "slick-theme";
 @import "slick";
 
+@import "partials/variables";
+@import "partials/mixins";
+
 /*
 
 Powell Peralta Test Project
@@ -18,25 +21,6 @@ Version: 1.0
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
 
-// Default Variables
-
-$red: #b4282e;
-$yellow: #f3ca31;
-$maxWidth: 1024px;
-$fb: #3A589B;
-$rss: #E19126;
-$tw: #598DCA;
-$yt: #CF3427;
-
-/* Mixins */
-
-@mixin hoverAnimation  {
-  webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
 /* General Styles */
 
 html {
@@ -46,27 +30,25 @@ html {
 }
 
 body {
+  @include defaultFont;
   background-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Montserrat", sans-serif;
 }
 
-header { margin: 0 auto; }
+header { @include centerElement; }
 
 a {
+  @include defaultFont;
   text-decoration: none; 
-  font-family: "Montserrat", sans-serif;
-
   :hover { text-decoration: none; }
 }
 
 p {
-  font-family: "canada-type-gibson";
+  @include defaultFont;
 }
 
 .row {
+  @include centerElement;
   padding: 0;
-  margin: 0 auto;
   max-width: $maxWidth;
 }
 
@@ -85,7 +67,7 @@ p {
     padding-top: 20px;
     display: inline-block;
     text-decoration: none;
-    color: #fff;
+    color: $white;
     text-transform: uppercase;
     cursor: pointer;
 
@@ -140,13 +122,13 @@ p {
 }
 
 
-.fb { background-color: $fb; }
+.fb { @include socialBG($fb); }
 
-.rss { background-color: $rss; }
+.rss { @include socialBG($rss); }
 
-.tw { background-color: $tw; }
+.tw { @include socialBG($tw); }
 
-.yt { background-color: $yt; }
+.yt { @include socialBG($yt); }
 
 
 /* Navigation */
@@ -163,13 +145,13 @@ nav {
       text-align: center;
 
       a {
+        @include elementBorder(0 4px 0 rgba(255, 255, 255, 0.3));
         background-color: $red;
-        box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
         height: 100%;
         width: 100%;
         display: block;
         padding-top: 8px;
-        color: #fff;
+        color: $white;
         font-size: 18px;
         text-transform: uppercase;
 
@@ -193,8 +175,8 @@ nav {
 
         &:active, &:hover, &:focus {
           @include hoverAnimation;
+          @include elementBorder(0 4px 0 #f3ca31);
           color: $yellow;
-          box-shadow: 0 4px 0 #f3ca31;
           text-decoration: none;
         }
       }
@@ -233,7 +215,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
 }
 
 .slideshowContainer {
-  max-width: 1024px;
+  max-width: $maxWidth;
   max-height: 350px;
   margin: 30px auto 10px auto;
 }
@@ -284,7 +266,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
 
 .blogArticle {
   background-color: #fefefe;
-  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+  @include elementBorder(0 4px 0 rgba(255, 255, 255, 0.3));
   padding: 20px;
   text-align: center;
   margin-bottom: 20px;
@@ -334,7 +316,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
     height: auto;
     margin: 0;
     padding: 0;
-    box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+    @include elementBorder(0 4px 0 rgba(255, 255, 255, 0.3));
   }
 
   h1 {
@@ -355,7 +337,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
 
 .sb:hover img {
   @include hoverAnimation;
-  box-shadow: 0 4px 0  #f3ca31;
+  @include elementBorder(0 4px 0  #f3ca31);
 }
 
 .sbOverlay {
@@ -388,7 +370,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
   background-size: cover;
   max-width: $maxWidth;
   min-height: 300px;
-  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+  @include elementBorder(0 4px 0 rgba(255, 255, 255, 0.3));
 
   img {
     display: inline-block;
@@ -410,7 +392,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
 
 .callout:hover:after{
     background: rgba(0,0,0,.7);
-    box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
+    @include elementBorder(0 4px 0 rgba(255, 255, 255, 0.3));
     bottom: 26px;
     color: #fff;
     content: attr(title);
@@ -475,8 +457,8 @@ nav ul li:hover a:after, nav ul li:hover a:before {
   margin: 30px auto 30px auto;
   background: url('../images/moduleBG.jpg') center center no-repeat;
   background-size: cover;
-  box-shadow: 0 4px 0 rgba(255, 255, 255, 0.3);
-  max-width: 1024px;
+  @include elementBorder(0 4px 0 rgba(255, 255, 255, 0.3));
+  max-width: $maxWidth;
 
   form {
     padding-top: 30px;
@@ -492,7 +474,7 @@ nav ul li:hover a:after, nav ul li:hover a:before {
     padding: 5px;
 
     &:focus {
-      box-shadow: 0 0 10px #f3ca31;
+    @include elementBorder(0 0 10px #f3ca31);
     outline: none;
     }
   }

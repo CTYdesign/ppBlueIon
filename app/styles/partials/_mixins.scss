@@ -1,0 +1,29 @@
+// =============================================================================
+// PP Mixins
+// =============================================================================
+
+@mixin hoverAnimation  {
+  webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin defaultFont {
+	-webkit-font-smoothing: antialiased;
+	font-family: "Montserrat", sans-serif;
+}
+
+@mixin centerElement {
+	margin: 0 auto;
+}
+
+@mixin socialBG ($color) {
+	background-color: $color;
+}
+
+@mixin elementBorder($top, $left, $blur, $color) {
+	-webkit-box-shadow: $top, $left, $blur, $color;
+	-moz-box-shadow: $top, $left, $blur, $color;
+	box-shadow: $top, $left, $blur, $color;
+}
